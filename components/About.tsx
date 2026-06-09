@@ -8,19 +8,23 @@ export default function About() {
         </h2>
 
         <p className="text-xl text-gray-300 leading-relaxed">
-          I am Pavani Prabalika Mandla, a Final Year Computer Science
-          Engineering student at NBKR Institute of Science and Technology.
+          I am Pavani Prabalika Mandla, a Computer Science Engineering
+          graduate from NBKR Institute of Science and Technology with a
+          strong passion for Artificial Intelligence, Machine Learning,
+          Computer Vision and Full Stack Development.
         </p>
 
         <p className="mt-8 text-xl text-gray-400 leading-relaxed">
-          My interests include Artificial Intelligence, Machine Learning,
-          Computer Vision, Data Analytics and Full Stack Development.
+          I have built real-world projects including an AI Powered Fraud
+          Management System for Aadhaar verification, Diabetic Retinopathy
+          Detection using Deep Learning, Team Task Management Platforms and
+          Data Analytics Dashboards.
         </p>
 
         <p className="mt-8 text-xl text-gray-400 leading-relaxed">
-          I enjoy building intelligent systems that solve real-world
-          problems, from Aadhaar Fraud Detection using Computer Vision
-          to Full Stack Team Management Platforms and Analytics Dashboards.
+          My goal is to leverage technology to solve meaningful problems,
+          create intelligent solutions and continuously grow as a Software
+          Engineer and AI Professional.
         </p>
 
       </div>
