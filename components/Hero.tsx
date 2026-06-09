@@ -30,28 +30,7 @@ export default function Hero() {
 
         {/* Photo Section */}
         <div className="flex justify-center relative">
-    <div className="absolute w-72 h-72 bg-cyan-500/20 blur-3xl rounded-full"></div>
 
-<<<<<<< HEAD
-    <Image
-      src="/images/pavani.jpeg"
-      alt="Pavani"
-      width={280}
-      height={280}
-      className="
-relative
-w-64
-h-64
-rounded-full
-object-cover
-object-top
-border-4
-border-cyan-400
-shadow-[0_0_50px_rgba(34,211,238,0.6)]
-"
-    />
-  </div>
-=======
           <div className="absolute w-80 h-80 bg-cyan-500/20 blur-3xl rounded-full"></div>
 
           <Image
@@ -74,7 +53,6 @@ shadow-[0_0_50px_rgba(34,211,238,0.6)]
           />
         </div>
 
->>>>>>> 4118188ba0f1cc4d0ae65db97e76d0b676d1f0c1
         {/* Text Section */}
         <div>
 
