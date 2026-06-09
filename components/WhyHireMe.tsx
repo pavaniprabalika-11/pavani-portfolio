@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function WhyHireMe() {
   const strengths = [
     {
@@ -33,7 +37,13 @@ export default function WhyHireMe() {
   ];
 
   return (
-    <section className="bg-black text-white py-24 px-6">
+    <motion.section
+      className="bg-black text-white py-24 px-6"
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="max-w-6xl mx-auto">
 
         <h2 className="text-5xl font-bold mb-4">
@@ -47,9 +57,23 @@ export default function WhyHireMe() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {strengths.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="p-6 border border-cyan-500/20 rounded-2xl hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition"
+              whileHover={{
+                scale: 1.05,
+                y: -8,
+              }}
+              transition={{ duration: 0.2 }}
+              className="
+                p-6
+                border
+                border-cyan-500/20
+                rounded-2xl
+                hover:border-cyan-400
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.25)]
+                transition-all
+                duration-300
+              "
             >
               <div className="text-4xl mb-4">
                 {item.icon}
@@ -62,12 +86,12 @@ export default function WhyHireMe() {
               <p className="text-gray-400 mt-3">
                 {item.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
 
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
