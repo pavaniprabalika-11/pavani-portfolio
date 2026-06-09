@@ -1,17 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { portfolio } from "@/data/portfolio";
 import AiExplainer from "@/components/AiExplainer";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<any>(null);
-
   const [selectedTechnology, setSelectedTechnology] =
     useState<string | null>(null);
 
   return (
-    <section className="bg-black text-white py-24 px-6">
+    <motion.section
+      className="bg-black text-white py-24 px-6"
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="max-w-6xl mx-auto">
 
         <h2 className="text-5xl font-bold mb-4">
@@ -26,9 +32,23 @@ export default function Projects() {
         <div className="grid gap-8">
 
           {portfolio.projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="p-8 rounded-3xl border border-cyan-500/20 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-300"
+              whileHover={{
+                y: -10,
+                scale: 1.02,
+              }}
+              transition={{ duration: 0.2 }}
+              className="
+                p-8
+                rounded-3xl
+                border
+                border-cyan-500/20
+                hover:border-cyan-400
+                hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]
+                transition-all
+                duration-300
+              "
             >
               <h3 className="text-3xl font-bold text-cyan-400">
                 {project.title}
@@ -39,32 +59,64 @@ export default function Projects() {
               </p>
 
               <div className="flex flex-wrap gap-3 mt-6">
+
                 {project.tech.map((tech, techIndex) => (
-                  <button
+                  <motion.button
                     key={techIndex}
                     onClick={(e) => {
                       e.stopPropagation();
                       setSelectedTechnology(tech);
                     }}
-                    className="px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-300 text-sm hover:bg-cyan-500/20 transition"
+                    whileHover={{
+                      scale: 1.08,
+                      y: -3,
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                    }}
+                    className="
+                      px-4
+                      py-2
+                      rounded-full
+                      bg-cyan-500/10
+                      text-cyan-300
+                      text-sm
+                      hover:bg-cyan-500/20
+                      hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]
+                      transition-all
+                    "
                   >
                     {tech}
-                  </button>
+                  </motion.button>
                 ))}
+
               </div>
 
-              <button
+              <motion.button
                 onClick={() => setSelectedProject(project)}
-                className="mt-8 px-6 py-3 bg-cyan-400 text-black rounded-xl font-semibold hover:scale-105 transition"
+                whileHover={{
+                  scale: 1.05,
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
+                className="
+                  mt-8
+                  px-6
+                  py-3
+                  bg-cyan-400
+                  text-black
+                  rounded-xl
+                  font-semibold
+                "
               >
                 Learn More
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           ))}
 
         </div>
 
-        {/* Project Explanation */}
         {selectedProject && (
           <AiExplainer
             title={selectedProject.title}
@@ -73,7 +125,6 @@ export default function Projects() {
           />
         )}
 
-        {/* Technology Explanation */}
         {selectedTechnology && (
           <AiExplainer
             title={selectedTechnology}
@@ -87,6 +138,6 @@ export default function Projects() {
         )}
 
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -60,7 +60,42 @@ window.speechSynthesis.speak(speech);
       respond(
         "My AI Powered Fraud Management System verifies Aadhaar documents using YOLOv8, EasyOCR, OpenCV and Streamlit. It detects Aadhaar cards, classifies them as Real or Fake and extracts important details automatically."
       );
+
+    
     } else if (
+  q.includes("project") ||
+  q.includes("projects")
+) {
+  respond(
+    "I have worked on four major projects. First, an AI Powered Fraud Management System that verifies Aadhaar documents using YOLOv8, EasyOCR, OpenCV and Streamlit. Second, a Diabetic Retinopathy Detection system that uses Deep Learning to identify eye diseases from retinal images. Third, a Team Task Manager web application for task assignment, tracking and collaboration. Fourth, a Student Performance Analytics dashboard that analyzes academic data and generates insights using Power BI and Python."
+  );
+}    
+else if (
+  q.includes("diabetic") ||
+  q.includes("retinopathy")
+) {
+  respond(
+    "My Diabetic Retinopathy Detection project uses Deep Learning and Computer Vision techniques to analyze retinal images and identify signs of diabetic eye disease at an early stage."
+  );
+}
+
+else if (
+  q.includes("team task") ||
+  q.includes("task manager")
+) {
+  respond(
+    "Team Task Manager is a full stack application designed to assign, track and manage team tasks efficiently. It improves collaboration and productivity."
+  );
+}
+
+else if (
+  q.includes("student performance")
+) {
+  respond(
+    "Student Performance Analytics is a data analytics project that analyzes student academic performance and generates meaningful insights through dashboards and visualizations."
+  );
+}
+    else if (
       q.includes("education") ||
       q.includes("study") ||
       q.includes("college") ||

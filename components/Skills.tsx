@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { portfolio } from "@/data/portfolio";
 import AiExplainer from "@/components/AiExplainer";
 
@@ -27,7 +28,14 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-black text-white py-24 px-6">
+    <motion.section
+      id="skills"
+      className="bg-black text-white py-24 px-6"
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="max-w-6xl mx-auto">
 
         <h2 className="text-5xl font-bold mb-4">
@@ -41,13 +49,29 @@ export default function Skills() {
         <div className="flex flex-wrap gap-4">
 
           {skills.map((skill) => (
-            <button
+            <motion.button
               key={skill}
               onClick={() => setSelectedSkill(skill)}
-              className="px-5 py-3 rounded-full bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
+              whileHover={{
+                scale: 1.08,
+                y: -4,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              className="
+                px-5 py-3
+                rounded-full
+                bg-cyan-500/10
+                text-cyan-300
+                hover:bg-cyan-500/20
+                hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]
+                transition-all
+                duration-300
+              "
             >
               {skill}
-            </button>
+            </motion.button>
           ))}
 
         </div>
@@ -65,6 +89,6 @@ export default function Skills() {
         )}
 
       </div>
-    </section>
+    </motion.section>
   );
 }

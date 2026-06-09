@@ -1,6 +1,16 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function About() {
   return (
-    <section className="bg-black text-white py-24 px-6">
+    <motion.section
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="bg-black text-white py-24 px-6"
+    >
       <div className="max-w-5xl mx-auto">
 
         <h2 className="text-5xl font-bold mb-10">
@@ -28,6 +38,6 @@ export default function About() {
         </p>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -30,18 +30,26 @@ export default function Hero() {
 
         {/* Photo Section */}
         <div className="flex justify-center relative">
+    <div className="absolute w-72 h-72 bg-cyan-500/20 blur-3xl rounded-full"></div>
 
-          <div className="absolute w-96 h-96 bg-cyan-500/10 blur-3xl rounded-full"></div>
-
-          <Image
-            src="/images/pavani.jpeg"
-            alt="Pavani"
-            width={400}
-            height={500}
-            className="relative rounded-3xl border border-cyan-500/20 shadow-2xl"
-          />
-        </div>
-
+    <Image
+      src="/images/pavani.jpeg"
+      alt="Pavani"
+      width={280}
+      height={280}
+      className="
+relative
+w-64
+h-64
+rounded-full
+object-cover
+object-top
+border-4
+border-cyan-400
+shadow-[0_0_50px_rgba(34,211,238,0.6)]
+"
+    />
+  </div>
         {/* Text Section */}
         <div>
           <p className="text-cyan-400 uppercase tracking-[0.3em] mb-4">
