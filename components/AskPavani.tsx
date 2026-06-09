@@ -162,7 +162,7 @@ window.speechSynthesis.speak(speech);
         <button
           onClick={() =>
             speak(
-              "Hello, I am Pavani Prabalika. I am a final year Computer Science Engineering student at NBKR Institute of Science and Technology. I specialize in Artificial Intelligence, Machine Learning, Computer Vision and Full Stack Development."
+              "Hello, I am Pavani Prabalika, a Computer Science Engineering graduate at NBKR Institute of Science and Technology. I specialize in Artificial Intelligence, Machine Learning, Computer Vision and Full Stack Development."
             )
           }
           className="px-5 py-3 bg-cyan-400 text-black rounded-xl font-semibold hover:scale-105 transition"
