@@ -110,7 +110,7 @@ else if (
       q.includes("marks")
     ) {
       respond(
-        "My current B.Tech CGPA is 7.86. I scored 90.3 percent in Intermediate and 9.67 GPA in SSC."
+        "My current B.Tech CGPA is 8.06. I scored 90.3 percent in Intermediate and 9.67 GPA in SSC."
       );
     } else if (
       q.includes("skill") ||
