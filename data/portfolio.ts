@@ -13,7 +13,7 @@ export const portfolio = {
       degree: "B.Tech Computer Science and Engineering",
       institute: "NBKR Institute of Science and Technology",
       year: "2022 - 2026",
-      score: "CGPA: 7.86",
+      score: "CGPA: 8.06",
     },
     {
       degree: "Intermediate (MPC)",
