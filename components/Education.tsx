@@ -30,7 +30,7 @@ export default function Education() {
               NBKR Institute of Science and Technology
             </p>
             <p className="text-gray-500">
-              CGPA: 7.86/10
+              CGPA: 8.06/10
             </p>
           </div>
 
